@@ -6,12 +6,10 @@ fun main() {
     print("Какой ингридиент вы хотите найти? Введиет название ингридиента: ")
     val userInput = readln()
 
-    for(search in arrayOfOlivie){
-        if (search == userInput) println("Ингридиент $search есть в рецепте")
-        else if (search != userInput) println("Такого ингридиента в рецепте нет") //не понимаю как сделать адекватный вывод этой строки
+    for (search in arrayOfOlivie) {
+        if (search == userInput) {
+            return println("Ингридиент $search есть в рецепте")
+        }
     }
-
-
-
-
+    println("Такого ингридиента в рецепте нет")
 }
