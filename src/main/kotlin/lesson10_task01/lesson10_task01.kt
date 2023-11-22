@@ -16,11 +16,11 @@ fun main() {
     Thread.sleep(1000)
 
     if (userValue > pcValue) println("Победил человек")
-    else if(userValue == pcValue) println("Ничья")
+    else if (userValue == pcValue) println("Ничья")
     else println("Победил компьютер")
 }
 
-fun getRandomNumber(): Int{
+fun getRandomNumber(): Int {
     val randomNumber = (1..6).random()
     return randomNumber
 }
