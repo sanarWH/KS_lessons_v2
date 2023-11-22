@@ -1,4 +1,4 @@
-package lesson07_task01
+package lesson07_task1
 
 fun main() {
     val rangeNumber = 1..9
