@@ -2,18 +2,11 @@ package lesson07_task01
 
 fun main() {
 
-    val arrayOfViews = arrayOf(1, 2, 3, 4, 5, 6, 7)
+    val arrayOfViews = arrayOf(1745, 2342, 2967, 2136, 2764, 2998, 3221)
 
-    arrayOfViews[0] = 1745
-    arrayOfViews[1] = 2342
-    arrayOfViews[2] = 2967
-    arrayOfViews[3] = 2136
-    arrayOfViews[4] = 2764
-    arrayOfViews[5] = 2998
-    arrayOfViews[6] = 3221
-
-    println("""Просмотров рекламы за неделю: ${arrayOfViews[0] + arrayOfViews[1] + arrayOfViews[3] + 
-            arrayOfViews[4] + arrayOfViews[5]+ arrayOfViews[6]}""")
-
-
+    var sumArray = 0
+    for (i in arrayOfViews) {
+        sumArray += i
+    }
+    println("Просмотров рекламы за неделю: $sumArray")
 }
