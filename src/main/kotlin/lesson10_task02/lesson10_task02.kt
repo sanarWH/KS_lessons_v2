@@ -9,8 +9,8 @@ fun main() {
     inputLength(userPassword)
 }
 
-fun inputLength(name: String?) {
-    if (name?.length!! < 4) {
+fun inputLength(name: String) {
+    if (name.length < 4) {
         return print("Логин или пароль недостаточно длинные")
     } else return (println("Добро пожаловать"))
 }
