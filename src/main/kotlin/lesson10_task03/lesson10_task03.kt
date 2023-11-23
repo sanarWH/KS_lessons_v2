@@ -24,12 +24,4 @@ fun passwordGenerator() {
 
     val passwordRandom = password.toList().shuffled().joinToString("")
     print("Ваш случайно сгенерированный пароль из $length символов: $passwordRandom")
-
 }
-
-//do {
-//    password += number.random()
-//    password += letter.random()
-//    password += letterBig.random()
-//    password += symbol.random()
-//} while (password.length < length)
