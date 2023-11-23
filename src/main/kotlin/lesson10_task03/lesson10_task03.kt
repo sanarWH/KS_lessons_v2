@@ -10,12 +10,12 @@ fun passwordGenerator() {
     val number = 0..9
     val letter = 'a'..'z'
     val letterBig = 'A'..'Z'
-    val symbol = '\u0020'.. '\u002F'
+    val symbol = '\u0020'..'\u002F'
     var password: String = ""
     print("Какой длины пароль вы хотите сгененрировать? Ответ: ")
     val length = readln().toInt()
 
-    while (password.length < length){
+    while (password.length < length) {
         password += number.random()
         password += letter.random()
         password += letterBig.random()
