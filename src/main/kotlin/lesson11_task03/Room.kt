@@ -1,6 +1,6 @@
 package lesson11_task03
 
-class Room(
+class RoomX(
     var cover: String,
     var name: String,
     var listOfUserPhoto: MutableList<String>,
