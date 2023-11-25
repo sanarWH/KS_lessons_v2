@@ -1,6 +1,6 @@
 package lesson11_task02
 
-class UserData(
+class UserDataX(
     val identifier: Int,
     var login: String,
     var password: String,
