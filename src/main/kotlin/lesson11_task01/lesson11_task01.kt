@@ -27,3 +27,10 @@ fun main() {
         |почта: ${user2.mail}
     """.trimMargin())
 }
+class UserData(
+    val identifier: Int,
+    val login: String,
+    val password: String,
+    val mail: String,
+) {
+}
