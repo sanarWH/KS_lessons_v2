@@ -13,20 +13,25 @@ fun main() {
         password = "SallySalivan",
         mail = "sally11@mail.com"
     )
-    println("""Данные пользователя1: 
+    println(
+        """Данные пользователя1: 
         |идентификатор: ${user1.identifier}
         |логин: ${user1.login}
         |пароль: ${user1.password}
         |почта: ${user1.mail}
-    """.trimMargin())
+    """.trimMargin()
+    )
     println()
-    println("""Данные пользователя2: 
+    println(
+        """Данные пользователя2: 
         |идентификатор: ${user2.identifier}
         |логин: ${user2.login}
         |пароль: ${user2.password}
         |почта: ${user2.mail}
-    """.trimMargin())
+    """.trimMargin()
+    )
 }
+
 class UserData(
     val identifier: Int,
     val login: String,
