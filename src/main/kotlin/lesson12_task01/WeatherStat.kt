@@ -1,6 +1,6 @@
 package lesson12_task01
 
-class WeatherStat(dayWeather: Int, nightWeather: Int, isRain: Boolean) {
+class WeatherStatX(dayWeather: Int, nightWeather: Int, isRain: Boolean) {
     var dayWeather = dayWeather
     var nightWeather = nightWeather
     var isRain = isRain

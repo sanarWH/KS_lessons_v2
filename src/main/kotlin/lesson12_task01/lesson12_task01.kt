@@ -7,3 +7,18 @@ fun main() {
     day1.inConsole()
     day2.inConsole()
 }
+
+class WeatherStat(dayWeather: Int, nightWeather: Int, isRain: Boolean) {
+    var dayWeather = dayWeather
+    var nightWeather = nightWeather
+    var isRain = isRain
+
+    fun inConsole() {
+        println(
+            """Дневная температура: $dayWeather
+            |Ночная температура: $nightWeather
+            |Наличие осадков в течение суток: $isRain
+        """.trimMargin()
+        )
+    }
+}
