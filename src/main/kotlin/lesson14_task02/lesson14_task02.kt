@@ -12,3 +12,48 @@ fun main() {
     iceShip1.inConsole()
     println()
 }
+
+open class LinerV2(
+    val name: String,
+    val speed: Int,
+    val passenger: Int,
+    val lifting: Int,
+    val isIceDestroyer: Boolean = false,
+    val method: String = "Лайнер выдвигает горизонтальный трап со шкафута",
+) {
+    fun inConsole() {
+        println(
+            """
+            Имя коробля: $name
+            Скорость корабля: $speed
+            Сколько пассажиров вмещается: $passenger
+            Грузоподъемность: $lifting
+            Может ли ломать лед: $isIceDestroyer
+            Метод погрузки: $method
+        """.trimIndent()
+        )
+    }
+}
+
+class IceshipV2(
+    name: String,
+    speed: Int,
+    passenger: Int,
+    lifting: Int,
+    isIceDestroyer: Boolean = true,
+    method: String = "Ледокол открывает ворота со стороны кормы",
+
+    ) : LinerV2(name, speed, passenger, lifting, isIceDestroyer, method) {
+}
+
+class CargoV2(
+    name: String,
+    speed: Int,
+    passenger: Int,
+    lifting: Int,
+    isIceDestroyer: Boolean = false,
+    method: String = "Грузовой корабль активирует погрузочный кран",
+
+
+    ) : LinerV2(name, speed, passenger, lifting, isIceDestroyer, method) {
+}
