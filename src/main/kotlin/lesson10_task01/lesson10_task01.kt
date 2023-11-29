@@ -20,8 +20,7 @@ fun main() {
     else println("Победил компьютер")
 }
 
-fun getRandomNumber(): Int {
-    val randomNumber = (1..6).random()
-    return randomNumber
-}
+fun getRandomNumber(): Int = (1..6).random()
+
+
 
