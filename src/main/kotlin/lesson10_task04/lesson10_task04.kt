@@ -1,17 +1,17 @@
 package lesson10_task04
 
 fun main() {
-    game()
+    startTheGame()
     print("Хотите бросить кости еще раз? Введите Да или Нет. Ответ: ")
-    val userInput = readln()
+    val userInput = readln().lowercase()
 
-    if (userInput == "Да") {
-        game()
-    } else println("Человек выиграл ${counter()} раундов. Компьютер выиграл ${counter()} раундов")
+    if (userInput == "да") {
+        startTheGame()
+    } else if(userInput == "нет") getCounter()
 
 }
 
-fun game() {
+fun startTheGame(): Int {
     val userValue = getRandomNumber()
     print("Ход человека. \nЗначения на кубиках: ")
     Thread.sleep(1000)
@@ -26,23 +26,35 @@ fun game() {
 
     Thread.sleep(1000)
 
-    if (userValue > pcValue) return println("Победил человек")
-    else if (userValue == pcValue) println("Ничья")
-    else return println("Победил компьютер")
+    var checkForCounter: Int = 0 //возвращаемое значение. Тип Boolean не подходит, потому что может быть ничья
+
+    if (userValue > pcValue) {
+        println("Победил человек")
+        checkForCounter = 1
+        return checkForCounter
+    } else if (userValue == pcValue) {
+        println("Ничья")
+        checkForCounter = 2
+        return checkForCounter
+    } else {
+        println("Победил компьютер")
+        checkForCounter = 3
+        return checkForCounter
+    }
 }
 
 fun getRandomNumber(): Int {
-    val randomNumber = (1..6).random()
-    return randomNumber
+    return (1..6).random()
 }
 
-fun counter() {
-    var counetrHuman = 0
+fun getCounter() {
+    var counterHuman = 0
     var counterPC = 0
-    if (game() == "Победил человек") {
-        counetrHuman += 1
-    } else if (game() == "Победил компьютер") {
-        counterPC += 1
-    }
+    var counterDraw = 0
 
+    if (startTheGame() == 1) counterHuman += 1
+    else if (startTheGame() == 2) counterDraw += 1
+    else if (startTheGame() == 3) counterPC += 1
+
+    return println("Человек выиграл $counterHuman раундов. Компьютер выиграл $counterPC раундов. Ничьи: $counterDraw")
 }
