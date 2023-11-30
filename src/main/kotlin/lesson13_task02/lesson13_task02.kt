@@ -5,17 +5,13 @@ fun main() {
     user1.getData()
 }
 
-class DataBaseV2(var nameOfUser: String, var number: Long, var nameOfCompany: String? = "") {
-
+class DataBaseV2(var nameOfUser: String, var number: Long, var nameOfCompany: String? = null) {
 
     fun getData() {
-        if (nameOfCompany == null || nameOfCompany == "") nameOfCompany = "не указано"
-
-        println(
-            """
+        println("""
             Имя: $nameOfUser
             Телефон: $number
-            Компания: $nameOfCompany
+            Компания: ${nameOfCompany ?: "не указано"}
         """.trimIndent()
         )
     }
