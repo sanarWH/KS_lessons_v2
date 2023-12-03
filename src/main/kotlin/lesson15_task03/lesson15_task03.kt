@@ -66,13 +66,9 @@ class User(
     override val isDeleteMessage: Boolean = false,
     override val isDeleteUser: Boolean = false
 ) : Privileges() {
-    override fun deleteMessage() {
-        TODO("Not yet implemented")
-    }
+    override fun deleteMessage(){}
 
-    override fun deleteUser() {
-        TODO("Not yet implemented")
-    }
+    override fun deleteUser(){}
 
     override fun sendMessage() {
         println("Доступна кнопка отправить сообщение")
