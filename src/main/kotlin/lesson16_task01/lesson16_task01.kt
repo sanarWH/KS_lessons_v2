@@ -1,8 +1,10 @@
 package lesson16_task01
 
 fun main() {
-    val x = Cube().getRandomNumber()
-    println(x)
+    val x = Cube()
+    x.getRandomNumber()
+    x.printRandomNumber()
+
 }
 
 class Cube() {
@@ -10,5 +12,8 @@ class Cube() {
 
     fun getRandomNumber(): Int {
         return randomNumber
+    }
+    fun printRandomNumber(){
+        println(getRandomNumber())
     }
 }
