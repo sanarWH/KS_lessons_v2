@@ -1,14 +1,21 @@
 fun main() {
     val que1 = QuizClass(question = "Какой вопрос?", answer = "Да")
     println(que1.question)
+    println(que1.answer)
 }
 
 class QuizClass (question: String?, answer: String?){
-    var question: String? = ""
+    var question: String? = question
         get(){
             return if (field == null) "Вопрос не задан"
-            else question
+            else field
+        }
+        set(value){
+            field = value
         }
 
-    val answer = null
+    var answer: String? = answer
+        set(value){
+            field = value
+        }
 }
